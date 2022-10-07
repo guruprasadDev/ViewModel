@@ -4,40 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-
-        <variable
-            name="mainViewModel"
-            type="com.guruthedev.viewmodel.MainActivityViewModel" />
-
+            <variable
+                name="mutableViewModel"
+                type="com.guruthedev.viewmodel.MutableLiveDataViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
+        tools:context=".MutableLiveDataActivity">
 
         <TextView
-            android:id="@+id/tvCount"
+            android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="60sp"
-            android:textStyle="bold"
-            android:text="@{String.valueOf(mainViewModel._countStart)}"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="200dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.129" />
+            app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/countBtn"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="@{()->mainViewModel.updateCount()}"
-            android:text="Count"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginTop="308dp"
+            android:text="btn"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
